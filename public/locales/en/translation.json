@@ -1,0 +1,52 @@
+{
+
+    "about": {
+      "title": "About Me",
+      "content1": "I am a Fullstack Developer with over 3 years of experience in creating innovative and efficient web solutions. My passion for technology and web development has led me to specialize in a wide range of technologies, including JavaScript, React, Node.js, and more.",
+      "content2": "In addition to my fullstack development experience, I am an AI enthusiast. I am fascinated by how AI is transforming the world, and I am constantly learning and experimenting with new techniques and tools in this field.",
+      "content3": "My goal is to combine my web development skills and my interest in AI to create intelligent applications that are not only functional but also intuitive and efficient. I am always looking for new challenges and opportunities to grow both professionally and personally."
+    },
+
+  
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "intro": "I'm a",
+    "description": "Creating innovative and efficient solutions.",
+    "cta": "Get in touch",
+    "alt": "Eduardo Cardoso Martinez",
+    "flipWords": [
+      "Problem Solver",
+      "Lifelong Learner",
+      "Fullstack Developer",
+      "AI Enthusiast"
+    ]
+  },
+
+  "contact": {
+    "title": "Get In Touch",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "formSubmitted": "Form submitted successfully",
+    "formSubmitError": "There was an error submitting the form"
+  },
+  "footer": {
+    "copyright": "Eduardo Cardoso M. All rights reserved."
+  },
+  "skills": {
+    "title": "My Tech Stack"
+  },
+  "project":{
+    "title": "My Projects"
+  }
+  
+}

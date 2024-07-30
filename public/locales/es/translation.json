@@ -1,0 +1,50 @@
+{
+  
+    "about": {
+      "title": "Sobre mí",
+      "content1": "Soy un desarrollador Fullstack con mas de 3 años de experiencia en la creación de soluciones web innovadoras y eficientes. Mi pasión por la tecnología y el desarrollo web me ha llevado a especializarme en una amplia variedad de tecnologías, incluyendo JavaScript, React, Node.js, y más.",
+      "content2": "Además de mi experiencia en desarrollo fullstack, soy un entusiasta de la Inteligencia Artificial. Me fascina cómo la IA está transformando el mundo y estoy constantemente aprendiendo y experimentando con nuevas técnicas y herramientas en este campo.",
+      "content3": "Mi objetivo es combinar mis habilidades en desarrollo web y mi interés por la IA para crear aplicaciones inteligentes que no solo sean funcionales, sino también intuitivas y eficientes. Siempre estoy en busca de nuevos desafíos y oportunidades para crecer profesional y personalmente."
+    },  
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  
+    "hero": {
+      "greeting": "Hola, soy",
+      "intro": "Soy un",
+      "description": "Creando soluciones innovadoras y eficientes.",
+      "cta": "Ponerse en contacto",
+      "alt": "Eduardo Cardoso Martinez",
+      "flipWords": [
+        "Solucionador de Problemas",
+        "Aprendiz de por Vida",
+        "Desarrollador Fullstack",
+        "Entusiasta de IA"
+      ]
+    },
+  
+  "contact": {
+    "title": "Ponerse en contacto",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando...",
+    "formSubmitted": "Formulario enviado con éxito",
+    "formSubmitError": "Hubo un error al enviar el formulario"
+  },
+  "footer": {
+    "copyright": "Eduardo Cardoso M. Todos los derechos reservados."
+  },
+  "skills": {
+    "title": "Mi Stack Tecnológico"
+  },
+  "project":{
+    "title": "Mis Proyectos"
+  }
+}

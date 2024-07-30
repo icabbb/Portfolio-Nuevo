@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import ThemeToggle from '@/components/ui/themeToggle';
+import LanguageSelector from '@/components/ui/languageSelector';
+import { t } from 'i18next';
+
+const menuItems = [
+  { href: "/", label: "nav.home" },
+  { href: "#about", label: "nav.about" },
+  { href: "#skills", label: "nav.skills" },
+  { href: "#projects", label: "nav.projects" },
+  { href: "#contact", label: "nav.contact" }
+];
+---
+
+<header class="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 bg-opacity-80 backdrop-blur-md text-gray-800 dark:text-white z-50 transition-all duration-300">
+  <div class="container mx-auto px-4 py-4">
+    <div class="flex justify-between items-center">
+      <a href="/" class="text-2xl font-bold">
+        <Image src="/your-logo.svg" alt="Your Name" width={40} height={40} />
+      </a>
+      
+      <nav class="hidden md:flex space-x-6 items-center">
+        {menuItems.map((item) => (
+          <a href={item.href} class="text-sm font-medium hover:text-blue-500 dark:hover:text-blue-400 transition-colors duration-300">
+            {t(item.label)}
+          </a>
+        ))}
+        <LanguageSelector client:load />
+        <ThemeToggle client:load />
+      </nav>
+
+      <button class="md:hidden text-gray-800 dark:text-white" id="mobile-menu-button" aria-label="Open mobile menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden hidden transition-all duration-300 ease-in-out" id="mobile-menu">
+    <nav class="px-2 pt-2 pb-3 space-y-1">
+      {menuItems.map((item) => (
+        <a href={item.href} class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300">
+          {t(item.label)}
+        </a>
+      ))}
+    </nav>
+    <div class="px-4 py-3 flex justify-between items-center">
+      <LanguageSelector client:load />
+      <ThemeToggle client:load />
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+    // Cambia el ícono del botón
+    const svg = mobileMenuButton.querySelector('svg');
+    if (svg) {
+      svg.innerHTML = mobileMenu?.classList.contains('hidden')
+        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>'
+        : '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+    }
+  });
+
+  // Cierra el menú móvil cuando se hace clic en un enlace
+  const mobileMenuLinks = mobileMenu?.querySelectorAll('a');
+  mobileMenuLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('hidden');
+    });
+  });
+</script>
