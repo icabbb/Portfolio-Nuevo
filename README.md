@@ -23,6 +23,6 @@ Este es mi portafolio personal, construido con Astro y React. Muestra mis proyec
 
 Si tienes alguna pregunta o quieres conectarte, puedes encontrarme en:
 
-- GitHub: [@tu-usuario](https://github.com/icabbb)
-- LinkedIn: [@Eduardo Cardoso Martinez]([https://www.linkedin.com/in/tu-perfil](https://www.linkedin.com/in/eduardo-cardoso-martinez-2a0318252/))
+- GitHub: [@icabbb](https://github.com/icabbb)
+- LinkedIn: [Eduardo Cardoso Martinez]([https://www.linkedin.com/in/tu-perfil](https://www.linkedin.com/in/eduardo-cardoso-martinez-2a0318252/))
 - Email: ecardoso2002.ec@gmail.com
