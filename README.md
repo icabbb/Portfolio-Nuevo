@@ -19,18 +19,6 @@ Este es mi portafolio personal, construido con Astro y React. Muestra mis proyec
 - [i18next](https://www.i18next.com) para internacionalización
 
 
-## 🚀 Despliegue
-
-Este proyecto está configurado para ser desplegado en Vercel.
-
-## 🤝 Contribuciones
-
-Las contribuciones, problemas y solicitudes de características son bienvenidas. Siéntete libre de revisar los [issues page](https://github.com/icabbb/Portfolio-nuevo/issues) si quieres contribuir.
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
 ## 📞 Contacto
 
 Si tienes alguna pregunta o quieres conectarte, puedes encontrarme en:
