@@ -47,6 +47,21 @@
   },
   "project":{
     "title": "My Projects"
-  }
+  },
+  
+    "featuredProject": {
+      "title": "Featured Project",
+      "subtitle": "Discover our latest innovation",
+      "name": "ReclutAI",
+      "description": "Advanced AI CV analysis to optimize your recruitment process. Find the perfect candidate in minutes.",
+      "viewDetails": "View details",
+      "viewDemo": "View Demo",
+      "viewGallery": "View gallery",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "imageCounter": "Image {{current}} of {{total}}",
+    "imageAlt": "Project image {{index}}"
+    }
+  
   
 }

@@ -1,0 +1,31 @@
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card img {
+    border-bottom: 2px solid #34D399; /* Línea de color esmeralda en la parte inferior de la imagen */
+  }
+  
+  .project-card h3 {
+    color: #111827; /* Texto de color más oscuro */
+  }
+  
+  .project-card p {
+    margin-bottom: 1rem;
+  }
+  
+  .project-card a {
+    color: #3B82F6; /* Azul para el enlace */
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .project-card a:hover {
+    color: #2563EB;
+  }
+  
