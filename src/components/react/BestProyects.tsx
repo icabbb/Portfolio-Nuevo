@@ -27,7 +27,7 @@ const itemVariants = {
   },
 };
 
-const ImageCarousel = ({ images  }) => {
+const ImageCarousel = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useTranslation();
 
