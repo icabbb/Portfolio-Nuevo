@@ -40,7 +40,7 @@ const AnimatedHero: React.FC = () => {
             <a href="https://github.com/icabbb" target="_blank" rel="noopener noreferrer" className="text-4xl text-gray-600 dark:text-gray-300 hover:text-secondaryC-light dark:hover:text-secondaryC-dark transition-colors">
               <FaGithub />
             </a>
-            <a href="https://www.linkedin.com/in/eduardo-cardoso-martinez-2a0318252/" target="_blank" rel="noopener noreferrer" className="text-4xl text-gray-600 dark:text-gray-300 hover:text-secondaryC-light dark:hover:text-secondaryC-dark transition-colors">
+            <a href="https://www.linkedin.com/in/ecardosom/" target="_blank" rel="noopener noreferrer" className="text-4xl text-gray-600 dark:text-gray-300 hover:text-secondaryC-light dark:hover:text-secondaryC-dark transition-colors">
               <FaLinkedin />
             </a>
             <a href="CV_EduardoC.pdf" download className="text-4xl text-gray-600 dark:text-gray-300 hover:text-secondaryC-light dark:hover:text-secondaryC-dark transition-colors">

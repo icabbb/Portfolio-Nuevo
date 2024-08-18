@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               <FaGithub className="text-2xl" />
             </a>
             <a
-              href="https://www.linkedin.com/in/eduardo-cardoso-martinez-2a0318252/"
+              href="https://www.linkedin.com/in/ecardosom/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-800 dark:text-white hover:text-emerald-500 dark:hover:text-blue-400 transition-colors duration-300"
