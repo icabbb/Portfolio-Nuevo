@@ -61,7 +61,7 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
       >
         <FaChevronRight />
       </Button>
-      <p className="text-center mt-2">
+      <p className="text-center mt-2 text-white">
         {t('featuredProject.imageCounter', { current: currentIndex + 1, total: images.length })}
       </p>
     </div>
@@ -151,7 +151,7 @@ const FeaturedProject = () => {
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
                 {project.description}
               </p>
-              <div className="flex items-center gap-4 mb-8">
+              <div className="flex items-center gap-4 ">
                 <SiNextdotjs className="h-8 w-8 text-gray-800 dark:text-white" title="Next.js" />
                 <SiTailwindcss className="h-8 w-8 text-blue-500" title="TailwindCSS" />
                 <SiClerk className="h-8 w-8 text-indigo-400" title="Clerk" />
@@ -159,7 +159,7 @@ const FeaturedProject = () => {
                 <SiOpenai className="h-8 w-8 text-black dark:text-white" title="OpenAI" />
                 <SiTypescript className="h-8 w-8 text-blue-600" title="TypeScript" />
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mt-4">
                 <motion.a
                   href={project.demoLink}
                   target="_blank"
