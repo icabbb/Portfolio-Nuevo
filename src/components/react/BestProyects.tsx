@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiSupabase, SiOpenai, SiClerk, SiTypescript } from 'react-icons/si';
 import {
   Dialog,
   DialogContent,
@@ -150,6 +151,14 @@ const FeaturedProject = () => {
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
                 {project.description}
               </p>
+              <div className="flex items-center gap-4 mb-8">
+                <SiNextdotjs className="h-8 w-8 text-gray-800 dark:text-white" title="Next.js" />
+                <SiTailwindcss className="h-8 w-8 text-blue-500" title="TailwindCSS" />
+                <SiClerk className="h-8 w-8 text-indigo-400" title="Clerk" />
+                <SiSupabase className="h-8 w-8 text-green-400" title="Supabase" />
+                <SiOpenai className="h-8 w-8 text-black dark:text-white" title="OpenAI" />
+                <SiTypescript className="h-8 w-8 text-blue-600" title="TypeScript" />
+              </div>
               <div className="flex flex-wrap gap-4">
                 <motion.a
                   href={project.demoLink}
