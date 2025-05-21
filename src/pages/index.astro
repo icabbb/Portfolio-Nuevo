@@ -1,4 +1,7 @@
 ---
+import { initI18next } from '@/i18n';
+await initI18next();
+
 import Layout from '@/layouts/Layout.astro';
 import Header from '@/components/layout/Header.astro';
 import Hero from '@/components/sections/Hero.astro';
@@ -6,7 +9,6 @@ import About from '@/components/sections/About.astro';
 import Skills from '@/components/sections/Skills.astro';
 import Contact from '@/components/sections/Contact.astro';
 import Footer from '@/components/layout/Footer.astro';
-import '@/i18n.ts';
 import Projects from '@/components/sections/Projects.astro';
 import SectionDivider from '@/components/ui/SectionDivider';
 import StarProject from '@/components/sections/StarProject.astro';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
@@ -71,25 +71,85 @@ const ImageCarousel = ({ images }: { images: string[] }) => {
 const FeaturedProject = () => {
   const { t } = useTranslation();
 
-  const project = {
-    name: t('featuredProject.name'),
-    description: t('featuredProject.description'),
-    imageUrl: 'ReclutAIP.png',
-    demoLink: 'https://www.reclutai.xyz',
-    images: [
-      'ReclutAIP.png',
-      'ReclutAIP2.png',
-      'ReclutAIP3.png',
-      'ReclutAIP4.png',
-      'ReclutAIP5.png',
-      'ReclutAIP6.png',
-      'ReclutAIP7.png',
+  const featuredProjects = [
+    {
+      name: t('featuredProject.name'),
+      description: t('featuredProject.description'),
+      imageUrl: 'ReclutAIP.png',
+      demoLink: 'https://www.reclutai.xyz',
+      images: [
+        'ReclutAIP.png',
+        'ReclutAIP2.png',
+        'ReclutAIP3.png',
+        'ReclutAIP4.png',
+        'ReclutAIP5.png',
+        'ReclutAIP6.png',
+        'ReclutAIP7.png',
+      ],
+      tech: [
+        { icon: <SiNextdotjs className="h-8 w-8 text-gray-800 dark:text-white" title="Next.js" />, name: "Next.js" },
+        { icon: <SiTailwindcss className="h-8 w-8 text-blue-500" title="TailwindCSS" />, name: "TailwindCSS" },
+        { icon: <SiClerk className="h-8 w-8 text-indigo-400" title="Clerk" />, name: "Clerk" },
+        { icon: <SiSupabase className="h-8 w-8 text-green-400" title="Supabase" />, name: "Supabase" },
+        { icon: <SiOpenai className="h-8 w-8 text-black dark:text-white" title="OpenAI" />, name: "OpenAI" },
+        { icon: <SiTypescript className="h-8 w-8 text-blue-600" title="TypeScript" />, name: "TypeScript" },
+      ]
+    },
+    {
+      name: "FlowAPI",
+      description: "FlowAPI es una app de flujos para Peticiones HTTP con nodos interactivos.",
+      imageUrl: 'flowapi1.png',
+      demoLink: 'https://flowapi.site',
+      images: [
+        'flowapi1.png',
+        'flowapi2.png',
+        'flowapi3.png'
+      ],
+      tech: [
+        { icon: <SiNextdotjs className="h-8 w-8 text-gray-800 dark:text-white" title="Next.js" />, name: "Next.js" },
+        { icon: <SiTailwindcss className="h-8 w-8 text-blue-500" title="TailwindCSS" />, name: "TailwindCSS" },
+        { icon: <SiTypescript className="h-8 w-8 text-blue-600" title="TypeScript" />, name: "TypeScript" },
+         { icon: <SiClerk className="h-8 w-8 text-indigo-400" title="Clerk" />, name: "Clerk" },
+        { icon: <SiSupabase className="h-8 w-8 text-green-400" title="Supabase" />, name: "Supabase" },
+      ]
+    }
+  ];
 
-    ],
+  const [selected, setSelected] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Cambio automático cada 6 segundos
+  useEffect(() => {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      setSelected((prev) => (prev + 1) % featuredProjects.length);
+    }, 6000);
+    return () => {
+      if (timerRef.current) clearTimeout(timerRef.current);
+    };
+  }, [selected, featuredProjects.length]);
+
+  const handleSelect = (idx: number) => {
+    setSelected(idx);
+    if (timerRef.current) clearTimeout(timerRef.current); // Reinicia temporizador
   };
+
+  const project = featuredProjects[selected];
 
   return (
     <section className="py-20 relative overflow-hidden">
+      {/* Selector de proyectos */}
+      <div className="flex justify-center gap-4 mb-8">
+        {featuredProjects.map((proj, idx) => (
+          <button
+            key={proj.name}
+            className={`px-4 py-2 rounded-full font-semibold ${selected === idx ? 'bg-emerald-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white'}`}
+            onClick={() => handleSelect(idx)}
+          >
+            {proj.name}
+          </button>
+        ))}
+      </div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml,...')] opacity-30 dark:opacity-20" />
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -152,12 +212,9 @@ const FeaturedProject = () => {
                 {project.description}
               </p>
               <div className="flex items-center gap-4 ">
-                <SiNextdotjs className="h-8 w-8 text-gray-800 dark:text-white" title="Next.js" />
-                <SiTailwindcss className="h-8 w-8 text-blue-500" title="TailwindCSS" />
-                <SiClerk className="h-8 w-8 text-indigo-400" title="Clerk" />
-                <SiSupabase className="h-8 w-8 text-green-400" title="Supabase" />
-                <SiOpenai className="h-8 w-8 text-black dark:text-white" title="OpenAI" />
-                <SiTypescript className="h-8 w-8 text-blue-600" title="TypeScript" />
+                {project.tech && project.tech.map((t, i) => (
+                  <span key={i}>{t.icon}</span>
+                ))}
               </div>
               <div className="flex flex-wrap gap-4 mt-4">
                 <motion.a
